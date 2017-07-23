@@ -1,0 +1,4 @@
+# Installing the NRPE Client on Centos7
+
+$ sudo yum install nrpe
+
