@@ -2,3 +2,31 @@
 
 $ sudo yum install nrpe
 
+Once the client is installed you will need to create a connection between the Host server (Nagios Server) and the node
+(Monitored server)
+
+You must also ensure that you have allowed the NRPE port through on your firewall.  This is how you do it on Centos7
+
+****************************
+Open Port 5666
+****************************
+$ iptables -I INPUT -p tcp --dport 5666 -j ACCEPT
+$ iptables-save > /etc/sysconfig/iptables
+$ sudo systemctl start nrpe.service
+
+To confirm that the two servers are able to talk to each other, log onto the Nagios server, browse to this directory and run this command
+
+$ cd /usr/local/nagios/libexec/
+$ sudo ./check_nrpe -H [the IP Address of your host]
+
+You should see the version of the NRPE client displayed back to you on screen.
+
+Log onto the Nagios Server and browse to the following location (this may be dependant on the version of Linux you are using or the version of NagiosCore you are using - just in my experience)
+
+$ /usr/local/nagios/etc/hosts/
+
+You might see a sample .cfg file in here it is best to copy this file and make your own in the same location.  Here is an example of one that I have:
+
+****************************
+$ ansible.cfg
+****************************
