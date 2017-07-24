@@ -4,3 +4,7 @@ Just find your OS and follow the commands on this website
 
 $ https://support.nagios.com/kb/article/nrpe-how-to-install-nrpe-v3-from-source.html#CentOS
 
+The main location for the config file is:
+
+$ /usr/local/nagios/etc/nrpe.cfg
+
