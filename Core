@@ -1,0 +1,12 @@
+#Steps to install NagiosCore on a Centos7 server
+
+Steps followed are from the Nagios Website here:
+
+$ https://support.nagios.com/kb/article/nagios-core-installing-nagios-core-from-source.html#CentOS
+
+This link provides all the steps you need to install the Nagios Core system.
+
+These YouTube links are also very helpful in combination with the above notes.
+
+$ https://www.youtube.com/watch?v=BtaSY1ALZzE
+$ https://www.youtube.com/watch?v=wKXVz_9GDbM&t=693s
